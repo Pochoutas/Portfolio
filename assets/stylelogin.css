@@ -1,0 +1,35 @@
+html {
+    
+   
+    background-image: url(./image/back.svg);
+   color: white;
+   overflow-x: hidden;
+   display: flex;
+   justify-content: center;
+}
+form {
+   
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background:  #229FE0 ;
+    width: 90vw;
+
+    box-shadow: 0px 10px 6px rgba(220, 220, 220, 0.25);
+}
+form input {
+    margin-top: 2vh;
+    width: 300px;
+}
+label {
+    margin-top: 2vh;
+}
+button {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 15px;
+    border: none;
+    margin: 2vh;
+    background-color: #094094;
+}

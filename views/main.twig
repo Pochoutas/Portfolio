@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<link rel="stylesheet" href="./responsive.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+		<link rel="stylesheet" href="./style.css">
+
+
+		<title>Jennifer Stabenau</title>
+	</head>
+
+	<body>
+		<div id="particles-js"></div>
+
+		<img id="picture" src="./image/dessindemoi.jpg">
+		<img id="sun" src="./image/carrébleu1.png">
+		<img id="suntwo" src="./image/crrébleu2.png">
+		<img id="aboutpicture" src="./image/ri7.png" data-aos="fade-left">
+		<img id="pictureskills" src="./image/codage-informatique.jpg" data-aos="fade-right">
+
+		<div class="right">
+
+			<header>
+				<nav>
+					<ul>
+						<li>
+							<a href="#aboutpicture">A propos</a>
+						</li>
+						<li>
+							<a href="#pictureskills">Compétences</a>
+						</li>
+						<li>
+							<a href="#project">Projet</a>
+						</li>
+						<li>
+							<a href="#contact">Contact</a>
+						</li>
+
+
+						<li id="connexion">
+							<a href="/userlogin">
+								connexion
+							</a>
+						</li>
+
+					</ul>
+				</nav>
+				<span id="presentation">
+					<p id="me">
+						Je m'appelle JENNIFER STABENAU</p>
+					<p>
+						Je suis développeuse web et d'applications</p>
+					<p>Je suis actuellement à la recherche
+					</p>
+					<p>d'une alternance pour mai 2023</p>
+				</span>
+				<span id="button" class=" animate__animated animate__pulse animate__infinite	infinite">
+					<button>
+						<a href="#about" class="text-white">En voir plus</a>
+					</button>
+				</span>
+			</header>
+		</div>
+		<div data-aos="fade-right">
+			<article class="left" id="about">
+				<h2>
+					A propos</h2>
+				<span id="description">
+
+					<p id="paragraphe">J'ai
+						<span>24 ans</span>
+						et j'ai débuté récemment une formation de Concepteur Développeur web et d'application à l'école RI7.
+																							 Avant de commencer cette formation j'ai eu de nombreuses expériences professionnelle
+																							qui m'ont permise de développer mon esprit d'équipe, mon autonomie et ma débrouillardise.
+																							 Ces compétences sont essentielles dans le métier de développeur web et je pense les avoir aiguiser ces atouts</p>
+
+
+				</span>
+			</article>
+		</div>
+
+		<div class="right" data-aos="fade-left">
+			<article id="skills">
+				<h2 class="titleright">Compétences</h2>
+				<span id="img_skill">
+					<span class="aligne">
+						<img src="./image/icons8-html-5-144.png" width="80vw">
+						<p>HTML</p>
+					</span>
+					<span class="aligne">
+						<img src="./image/icons8-css3-144.png" width="80vw">
+						<p>CSS</p>
+					</span>
+					<span class="aligne">
+						<img src="./image/icons8-figma-80.png" width="80vw">
+						<p>Figma</p>
+					</span>
+					<span class="aligne">
+						<img src="./image/icons8-logo-javascript-100.png" width="80vw">
+						<p>JavaScript</p>
+					</span>
+					<span class="aligne">
+						<img src="./image/icons8-bootstrap-96.png" width="80vw">
+						<p>Bootstrap</p>
+					</span>
+					<span class="aligne">
+						<img src="./image/pngwing.com.png" width="80vw">
+						<p>Node js</p>
+					</span>
+				</span>
+			</article>
+		</div>
+		<div id="project" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+			<h2>Mes Projets</h2>
+			<div id="carouselExample" class="carousel slide">
+				<div class="carousel-inner">
+					{% for project in projects %}
+						<div class="carousel-item">
+							<h3>{{project.title}}</h3>
+							<a href="{{project.link}}" target="_blank"><img src="./uploads/{{project.image}}" class="d-block "></a>
+							<p>{{project.description}}</p>
+						</div>
+					{% endfor %}
+
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon  btn btn-dark" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next " type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+					<span class="carousel-control-next-icon  btn btn-dark" aria-hidden="true"></span>
+					<span class="visually-hidden ">Next</span>
+				</button>
+			</div>
+		</div>
+
+
+		<div id="center">
+			<article id="contact" data-aos="fade-up" data-aos-duration="3000">
+					<h2>Contact</h2>
+					<span id="social">
+					<a href="https://www.linkedin.com/in/jennifer-stabenau-13b31b256/"><img id="linkedin" src="./image/linkedin.png"></a>
+					<a href="https://github.com/Pochoutas"><img id="github" src="./image/Githublog.png"></a>
+					</span>
+				<p>Vous souhaitez travailler sur un projet ? Ou travailler avec moi ? Contactez moi sans hésiter!</p>
+				<form method="POST" action="/sendMail">
+					<span id="identification">
+						<span id="nameform">
+							<label for="fname">
+								* Prénom:</label>
+							<input type="text" id="fname" name="fname">
+						</span>
+						<span id="lastnameform">
+							<label for="lname">* Nom:</label>
+							<input type="text" id="lname" name="lname">
+						</span>
+					</span>
+					<span>
+						<label for="fname">* Email:</label>
+						<input type="email" id="email" name="mail">
+					</span>
+					<span>
+						<label for="commentaire">* Commentaire</label>
+
+						<textarea id="comtext" name="message"></textarea>
+					</span>
+					<button id="valid" type="submit">
+						valider</button>
+				</form>
+				{# <form action="/addUser" methode="GET">
+																																																																		<button type="submit">Créer</button>
+																																																																	</form> #}
+
+			</article>
+
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+		<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+		<!-- stats.js lib -->
+		<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+	</body>
+</html></script><script src="./main.js"></script></body></html>
